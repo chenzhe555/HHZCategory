@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HHZCategory"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "分类"
 
   # This description is used to generate tags and improve search results.
@@ -94,11 +94,11 @@ Pod::Spec.new do |s|
 
   s.subspec 'HHZCategory' do |one|
       one.subspec 'foundation' do |three|
-        three.source_files = 'HHZCategory/*.{h,m}'
+        three.source_files = 'HHZCategory/foundation/*.{h,m}'
       end
 
       one.subspec 'uikit' do |three|
-        three.source_files = 'HHZCategory/*.{h,m}'
+        three.source_files = 'HHZCategory/uikit/*.{h,m}'
       end
 end
 
