@@ -92,6 +92,8 @@ Pod::Spec.new do |s|
   # s.source_files  = "Classes", "Classes/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
+  s.source_files = 'HHZCategory/HHZCategory.h'
+
   s.subspec 'HHZCategory' do |one|
       one.subspec 'foundation' do |three|
         three.source_files = 'HHZCategory/foundation/*.{h,m}'

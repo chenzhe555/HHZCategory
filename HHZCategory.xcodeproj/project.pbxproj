@@ -82,6 +82,7 @@
 		74A8C6F61F1A1F1000FA1726 /* UITableView+HHZCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+HHZCategory.m"; sourceTree = "<group>"; };
 		74A8C6F71F1A1F1000FA1726 /* UIView+HHZCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HHZCategory.h"; sourceTree = "<group>"; };
 		74A8C6F81F1A1F1000FA1726 /* UIView+HHZCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HHZCategory.m"; sourceTree = "<group>"; };
+		74A9708B1F2588D6009EF066 /* HHZCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHZCategory.h; sourceTree = "<group>"; };
 		8939AFA82C4F1B5D406FDEC2 /* libPods-HHZCategory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HHZCategory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE93A1F3A63751433FBBF49 /* Pods-HHZCategory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHZCategory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HHZCategory/Pods-HHZCategory.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +133,7 @@
 				74A8C6E81F1A1F1000FA1726 /* uikit */,
 				74A8C6BE1F1A1DF300FA1726 /* AppDelegate.h */,
 				74A8C6BF1F1A1DF300FA1726 /* AppDelegate.m */,
+				74A9708B1F2588D6009EF066 /* HHZCategory.h */,
 				74A8C6C11F1A1DF300FA1726 /* ViewController.h */,
 				74A8C6C21F1A1DF300FA1726 /* ViewController.m */,
 				74A8C6C41F1A1DF300FA1726 /* Main.storyboard */,
