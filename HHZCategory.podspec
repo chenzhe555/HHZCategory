@@ -92,7 +92,8 @@ Pod::Spec.new do |s|
   # s.source_files  = "Classes", "Classes/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
-  s.source_files = 'HHZCategory/HHZCategory.h'
+  s.public_header_files = 'HHZCategory/HHZCategory.h'
+  s.source_files  = 'HHZCategory/HHZCategory.h'
 
   s.subspec 'HHZCategory' do |one|
       one.subspec 'foundation' do |three|
@@ -102,7 +103,7 @@ Pod::Spec.new do |s|
       one.subspec 'uikit' do |three|
         three.source_files = 'HHZCategory/uikit/*.{h,m}'
       end
-end
+  end
 
   # s.public_header_files = "Classes/**/*.h"
 
