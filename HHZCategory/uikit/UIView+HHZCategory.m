@@ -73,7 +73,7 @@
 
 -(void)setYPlushHeight:(CGFloat)yPlushHeight
 {
-    self.frame = CGRectMake(self.x, tail - self.height, self.width, self.height);
+    self.frame = CGRectMake(self.x, yPlushHeight - self.height, self.width, self.height);
 }
 
 @end
