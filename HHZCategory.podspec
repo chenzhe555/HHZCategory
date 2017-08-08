@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HHZCategory"
-  s.version      = "0.0.2.3"
+  s.version      = "0.0.2.4"
   s.summary      = "分类"
 
   # This description is used to generate tags and improve search results.
