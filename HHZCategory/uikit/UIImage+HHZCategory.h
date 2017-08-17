@@ -90,16 +90,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(UIImage*)imageRotatedByDegrees_hhz:(CGFloat)degrees;
 
-/**
- *  设置Image的圆角，避免离屏渲染
- *
- *  @param radius 圆角
- *  @param size
- *
- *  @return
- */
--(UIImage * _Nullable)imageWithCornerRadius_hhz:(CGFloat)radius Size:(CGSize)size;
-
 @end
 
 @interface UIImage (HHZ_Watermark)
