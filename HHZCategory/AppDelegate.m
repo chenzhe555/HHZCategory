@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NSDictionary+HHZCategory.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSMutableDictionary * dic = [[NSMutableDictionary alloc] init];
+    [dic setObject_hhz:nil Key:@"chenzhe"];
+    
     return YES;
 }
 
