@@ -538,3 +538,22 @@
 }
 
 @end
+
+@implementation UIImage (HHZ_Circle)
+
+-(UIImage *)drawCircleImage
+{
+    CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
+    CGContextRef contextRef = UIGraphicsGetCurrentContext();
+    
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, [UIScreen mainScreen].scale);
+    CGContextAddPath(contextRef, [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:rect.size.width/2].CGPath);
+    CGContextClip(contextRef);
+    [self drawInRect:rect];
+    UIImage * img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return img;
+}
+
+@end

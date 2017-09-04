@@ -139,4 +139,10 @@ NS_ASSUME_NONNULL_BEGIN
 +(nullable UIImage *)mergeImage_hhz:(UIImage *)imageOne WithBImage:(UIImage *)imageTwo OneRect:(CGRect)oneRect TwoRect:(CGRect)twoRect BGRect:(CGRect)bgRect;
 @end
 
+
+@interface UIImage (HHZ_Circle)
+
+-(UIImage *)drawCircleImage;
+
+@end
 NS_ASSUME_NONNULL_END
