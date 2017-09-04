@@ -445,18 +445,6 @@
     return [self resizableImageWithCapInsets:edgeInset resizingMode:UIImageResizingModeTile];
 }
 
-+(UIImage *)transformToPureImageWithColor_hhz:(UIColor *)color
-{
-    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, color.CGColor);
-    CGContextFillRect(context, rect);
-    UIImage * image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
-}
-
 -(UIImage*)imageRotatedByDegrees_hhz:(CGFloat)degrees
 {
     CGFloat width = CGImageGetWidth(self.CGImage);
@@ -541,7 +529,7 @@
 
 @implementation UIImage (HHZ_Circle)
 
--(UIImage *)drawCircleImage
+-(UIImage *)hhz_drawCircleImage
 {
     CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
     CGContextRef contextRef = UIGraphicsGetCurrentContext();
@@ -554,6 +542,17 @@
     UIGraphicsEndImageContext();
     
     return img;
+}
+
++(UIImage *)hhz_gainPureColorImageRect:(CGRect)rect color:(UIColor *)color
+{
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, rect);
+    UIImage * image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 
 @end
