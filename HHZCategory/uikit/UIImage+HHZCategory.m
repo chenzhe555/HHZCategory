@@ -535,8 +535,7 @@
     CGContextRef contextRef = UIGraphicsGetCurrentContext();
     
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, [UIScreen mainScreen].scale);
-    CGContextAddPath(contextRef, [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:rect.size.width/2].CGPath);
-    CGContextClip(contextRef);
+    [[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:rect.size.width/2] addClip];
     [self drawInRect:rect];
     UIImage * img = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
