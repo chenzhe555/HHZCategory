@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E2ECD891F61347100D9C2C3 /* UISearchBar+HHZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2ECD881F61347100D9C2C3 /* UISearchBar+HHZCategory.m */; };
 		74A8C6BD1F1A1DF300FA1726 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A8C6BC1F1A1DF300FA1726 /* main.m */; };
 		74A8C6C01F1A1DF300FA1726 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A8C6BF1F1A1DF300FA1726 /* AppDelegate.m */; };
 		74A8C6C31F1A1DF300FA1726 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A8C6C21F1A1DF300FA1726 /* ViewController.m */; };
@@ -36,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		4C23CA547AB9843469BE6BF9 /* Pods-HHZCategory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHZCategory.release.xcconfig"; path = "Pods/Target Support Files/Pods-HHZCategory/Pods-HHZCategory.release.xcconfig"; sourceTree = "<group>"; };
+		6E2ECD871F61347100D9C2C3 /* UISearchBar+HHZCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+HHZCategory.h"; sourceTree = "<group>"; };
+		6E2ECD881F61347100D9C2C3 /* UISearchBar+HHZCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+HHZCategory.m"; sourceTree = "<group>"; };
 		74A8C6B81F1A1DF300FA1726 /* HHZCategory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHZCategory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74A8C6BC1F1A1DF300FA1726 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		74A8C6BE1F1A1DF300FA1726 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -206,6 +209,8 @@
 				74A8C6F61F1A1F1000FA1726 /* UITableView+HHZCategory.m */,
 				74A8C6F71F1A1F1000FA1726 /* UIView+HHZCategory.h */,
 				74A8C6F81F1A1F1000FA1726 /* UIView+HHZCategory.m */,
+				6E2ECD871F61347100D9C2C3 /* UISearchBar+HHZCategory.h */,
+				6E2ECD881F61347100D9C2C3 /* UISearchBar+HHZCategory.m */,
 			);
 			path = uikit;
 			sourceTree = "<group>";
@@ -344,6 +349,7 @@
 			files = (
 				74A8C6C31F1A1DF300FA1726 /* ViewController.m in Sources */,
 				74A8C6FB1F1A1F1000FA1726 /* NSException+HHZCategory.m in Sources */,
+				6E2ECD891F61347100D9C2C3 /* UISearchBar+HHZCategory.m in Sources */,
 				74A8C6FF1F1A1F1000FA1726 /* NSObject+HHZCategory.m in Sources */,
 				74A8C6FA1F1A1F1000FA1726 /* NSDictionary+HHZCategory.m in Sources */,
 				74A8C7051F1A1F1000FA1726 /* UIImage+HHZCategory.m in Sources */,
