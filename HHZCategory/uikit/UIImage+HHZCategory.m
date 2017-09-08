@@ -531,7 +531,7 @@
 
 -(UIImage *)hhz_drawCircleImage
 {
-    CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
+    CGRect rect = CGRectMake(0, 0, self.size.width, self.size.width);
     CGContextRef contextRef = UIGraphicsGetCurrentContext();
     
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, [UIScreen mainScreen].scale);
