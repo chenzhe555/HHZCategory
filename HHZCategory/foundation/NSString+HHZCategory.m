@@ -221,3 +221,20 @@
 }
 
 @end
+
+@implementation NSString (MJ_Extension)
+
++(BOOL)isEmptyValue:(NSString *)value
+{
+    if ([value isKindOfClass:[NSNull class]])
+    {
+        return YES;
+    }
+    else if (value == nil)
+    {
+        return YES;
+    }
+    return NO;
+}
+
+@end

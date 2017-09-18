@@ -131,5 +131,11 @@ typedef NS_ENUM(NSInteger,EmojiType) {
 -(BOOL)hhz_matchingIdentityCard;
 @end
 
+@interface NSString (MJ_Extension)
+
++(BOOL)isEmptyValue:(NSString *)value;
+
+@end
+
 NS_ASSUME_NONNULL_END
 
