@@ -189,6 +189,19 @@
 
 @implementation NSString (HHZ_Regular)
 
++(BOOL)hhz_isEmptyValue:(NSString *)value
+{
+    if ([value isKindOfClass:[NSNull class]])
+    {
+        return YES;
+    }
+    else if (value == nil)
+    {
+        return YES;
+    }
+    return NO;
+}
+
 -(BOOL)hhz_isEmptyOrAllSpace
 {
     if (self.length > 0)
@@ -222,19 +235,3 @@
 
 @end
 
-@implementation NSString (MJ_Extension)
-
-+(BOOL)isEmptyValue:(NSString *)value
-{
-    if ([value isKindOfClass:[NSNull class]])
-    {
-        return YES;
-    }
-    else if (value == nil)
-    {
-        return YES;
-    }
-    return NO;
-}
-
-@end

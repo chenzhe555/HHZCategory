@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "NSDictionary+HHZCategory.h"
+#import "NSArray+HHZCategory.h"
 
 @interface AppDelegate ()
 
@@ -18,10 +19,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    NSMutableDictionary * dic = [[NSMutableDictionary alloc] init];
-    [dic setObject_hhz:nil Key:@"chenzhe"];
-    
+    NSArray * arr = @[@"dsadfa",@(12),[UIImage new]];
+    NSDictionary * dic = @{
+                           @"key1":@"dassa",
+                           @"key2":@(33),
+                           @"key3":[UIView new]};
+    NSLog(@"%@\n\n\n\n\n",arr);
+    NSLog(@"%@",dic);
     return YES;
 }
 

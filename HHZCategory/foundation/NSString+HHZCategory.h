@@ -104,6 +104,8 @@ typedef NS_ENUM(NSInteger,EmojiType) {
 @end
 
 @interface NSString (HHZ_Regular)
+
++(BOOL)hhz_isEmptyValue:(NSString *)value;
 /**
  *  判断输入是否为空或者全是空格
  */
@@ -131,11 +133,6 @@ typedef NS_ENUM(NSInteger,EmojiType) {
 -(BOOL)hhz_matchingIdentityCard;
 @end
 
-@interface NSString (MJ_Extension)
-
-+(BOOL)isEmptyValue:(NSString *)value;
-
-@end
 
 NS_ASSUME_NONNULL_END
 

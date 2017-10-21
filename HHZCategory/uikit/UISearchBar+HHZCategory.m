@@ -10,7 +10,7 @@
 
 @implementation UISearchBar (HHZCategory)
 
--(void)clearAroundDottedLine
+-(void)hhz_clearAroundDottedLine
 {
     //方法1
 //    [self setBackgroundImage:[UIImage new]];

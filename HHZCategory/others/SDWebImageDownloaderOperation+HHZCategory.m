@@ -11,7 +11,7 @@
 
 static const char * hhz_AllowDomainsArray_Key;
 
-@implementation SDWebImageDownloaderOperation (AddDomain)
+@implementation SDWebImageDownloaderOperation (HHZ_AddDomain)
 
 -(NSArray *)hhz_AllowDomainsArray
 {

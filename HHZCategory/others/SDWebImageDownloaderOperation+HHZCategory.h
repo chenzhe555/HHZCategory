@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <SDWebImage/SDWebImageDownloaderOperation.h>
 
-@interface SDWebImageDownloaderOperation (AddDomain)
+@interface SDWebImageDownloaderOperation (HHZ_AddDomain)
 /**
  *  允许加载证书的网站
  */

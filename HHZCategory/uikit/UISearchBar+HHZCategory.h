@@ -13,6 +13,6 @@
 /**
  *  去掉四周的虚线
  */
--(void)clearAroundDottedLine;
+-(void)hhz_clearAroundDottedLine;
 
 @end
