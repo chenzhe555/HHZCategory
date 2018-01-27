@@ -377,3 +377,19 @@ static const int Block_Key;
     [dic removeAllObjects];
 }
 @end
+
+@implementation NSObject (Exceptions)
+
+-(id)objectForKey:(id)aKey
+{
+    if ([self isKindOfClass:[NSDictionary class]])
+    {
+        return [self objectForKey:aKey];
+    }
+    else
+    {
+        return nil;
+    }
+}
+
+@end
