@@ -44,6 +44,10 @@
     return self;
 }
 
+-(id)objectForKeyedSubscript:(NSString *)key
+{
+    return nil;
+}
 @end
 
 

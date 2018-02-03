@@ -42,6 +42,12 @@ NS_ASSUME_NONNULL_BEGIN
  *  多用于网络数据返回后的数组类型判断
  */
 -(instancetype)hhz_check;
+
+
+/**
+ 防止arr[@"key"]这种奔溃情况
+ */
+-(id)objectForKeyedSubscript:(NSString *)key;
 @end
 
 
