@@ -133,6 +133,9 @@ typedef NS_ENUM(NSInteger,EmojiType) {
 -(BOOL)hhz_matchingIdentityCard;
 @end
 
+@interface NSString (Convenience)
++(NSString *)getString:(id)obj;
+@end
 
 NS_ASSUME_NONNULL_END
 

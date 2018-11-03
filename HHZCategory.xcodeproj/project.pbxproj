@@ -32,6 +32,7 @@
 		74A8C7081F1A1F1000FA1726 /* UIScreen+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A8C6F41F1A1F1000FA1726 /* UIScreen+Category.m */; };
 		74A8C7091F1A1F1000FA1726 /* UITableView+HHZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A8C6F61F1A1F1000FA1726 /* UITableView+HHZCategory.m */; };
 		74A8C70A1F1A1F1000FA1726 /* UIView+HHZCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A8C6F81F1A1F1000FA1726 /* UIView+HHZCategory.m */; };
+		943C0AD7218DEE190042E87E /* UIView+Xib.m in Sources */ = {isa = PBXBuildFile; fileRef = 943C0AD6218DEE190042E87E /* UIView+Xib.m */; };
 		A1ADD4E08D508D6DEAD442DA /* libPods-HHZCategory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8939AFA82C4F1B5D406FDEC2 /* libPods-HHZCategory.a */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,8 @@
 		74A8C6F81F1A1F1000FA1726 /* UIView+HHZCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HHZCategory.m"; sourceTree = "<group>"; };
 		74A9708B1F2588D6009EF066 /* HHZCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHZCategory.h; sourceTree = "<group>"; };
 		8939AFA82C4F1B5D406FDEC2 /* libPods-HHZCategory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HHZCategory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		943C0AD5218DEE190042E87E /* UIView+Xib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Xib.h"; sourceTree = "<group>"; };
+		943C0AD6218DEE190042E87E /* UIView+Xib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Xib.m"; sourceTree = "<group>"; };
 		9FE93A1F3A63751433FBBF49 /* Pods-HHZCategory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHZCategory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HHZCategory/Pods-HHZCategory.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,6 +180,8 @@
 				74A8C6E21F1A1F1000FA1726 /* NSString+HHZCategory.m */,
 				74A8C6E31F1A1F1000FA1726 /* NSTimer+HHZCategory.h */,
 				74A8C6E41F1A1F1000FA1726 /* NSTimer+HHZCategory.m */,
+				943C0AD5218DEE190042E87E /* UIView+Xib.h */,
+				943C0AD6218DEE190042E87E /* UIView+Xib.m */,
 			);
 			path = foundation;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 				74A8C7001F1A1F1000FA1726 /* NSString+HHZCategory.m in Sources */,
 				74A8C7041F1A1F1000FA1726 /* UIColor+HHZCategory.m in Sources */,
 				74A8C6FC1F1A1F1000FA1726 /* NSNotificationCenter+Category.m in Sources */,
+				943C0AD7218DEE190042E87E /* UIView+Xib.m in Sources */,
 				74A8C70A1F1A1F1000FA1726 /* UIView+HHZCategory.m in Sources */,
 				74A8C7071F1A1F1000FA1726 /* UILabel+HHZCategory.m in Sources */,
 				74A8C6BD1F1A1DF300FA1726 /* main.m in Sources */,

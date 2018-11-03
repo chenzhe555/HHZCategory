@@ -235,3 +235,10 @@
 
 @end
 
+@implementation NSString (Convenience)
++ (NSString *)getString:(id)obj
+{
+    return [NSString stringWithFormat:@"%@",obj];
+}
+@end
+
