@@ -149,4 +149,14 @@ NS_ASSUME_NONNULL_BEGIN
 +(UIImage *)hhz_gainPureColorImageRect:(CGRect)rect color:(UIColor *)color;
 
 @end
+
+@interface UIImage (QRCode)
+/**
+ 生成二维码
+
+ @param qrString 二维码字符串
+ @param size 图片宽高
+ */
++(UIImage *)createQRImageWithString:(NSString *)qrString size:(CGFloat)size;
+@end
 NS_ASSUME_NONNULL_END
