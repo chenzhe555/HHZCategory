@@ -17,6 +17,7 @@
 #import "NSObject+HHZCategory.h"
 #import "NSString+HHZCategory.h"
 #import "NSTimer+HHZCategory.h"
+#import "UIView+Xib.h"
 
 #pragma mark uikit
 
