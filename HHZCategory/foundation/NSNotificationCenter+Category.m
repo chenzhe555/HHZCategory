@@ -8,7 +8,7 @@
 
 #import "NSNotificationCenter+Category.h"
 
-@implementation NSNotificationCenter (HHZ_OnMainThread)
+@implementation NSNotificationCenter (HHZ_NSNotificationCenter)
 
 -(void)hhz_postNotificationOnMainThreadWithName:(NSString *)name Object:(id)object UserInfo:(NSDictionary *)userInfo WaitUntilDone:(BOOL)wait
 {

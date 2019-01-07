@@ -9,7 +9,7 @@
 #import "NSException+HHZCategory.h"
 #include <execinfo.h>
 
-@implementation NSException (HHZ_Trace)
+@implementation NSException (HHZ_NSException)
 
 - (NSArray *)hhz_backtrace
 {

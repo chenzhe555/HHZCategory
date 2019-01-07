@@ -7,30 +7,16 @@
 //
 
 #import "NSNull+HHZCategory.h"
-#import <objc/runtime.h>
 
-//返回默认值0
-NSUInteger getDefaultLength(id self,SEL _cmd)
+@implementation NSNull (HHZ_NSNull)
+-(NSInteger)length
 {
     return 0;
 }
 
-@implementation NSNull (HHZ_MessageForward)
-/**
- *  如果调用length和count， 默认返回0(这个只是为了测试消息转发，实际项目没必要做这么麻烦,参照NSNumber即可)
- *
- *  @param sel 方法
- *
- *  @return 是否接收消息
- */
-+(BOOL)resolveInstanceMethod:(SEL)sel
+-(NSInteger)count
 {
-    if (sel == @selector(length) || sel == @selector(count))
-    {
-        class_addMethod([self class], sel, (IMP) getDefaultLength, "I@:");
-        return YES;
-    }
-    return [super resolveInstanceMethod:sel];
+    return 0;
 }
 
 @end

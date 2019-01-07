@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSNull (HHZ_MessageForward)
+@interface NSNull (HHZ_NSNull)
 
 @end
 

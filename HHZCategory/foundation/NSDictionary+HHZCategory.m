@@ -7,10 +7,11 @@
 //
 
 #import "NSDictionary+HHZCategory.h"
+#import <objc/runtime.h>
 
-#pragma mark ----------->NSDictionary
+#pragma mark NSDictionary
 
-@implementation NSDictionary (HHZ_Log)
+@implementation NSDictionary (HHZ_NSDictionary)
 
 -(NSString *)descriptionWithLocale:(id)locale
 {
@@ -30,29 +31,45 @@
     return [[self allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
 }
 
+-(id)getValueByKeys:(NSArray *)keys
+{
+    if (keys.count > 0) {
+        id obj = self.mutableCopy;
+        for (int i = 0; i < keys.count; ++i) {
+            obj = [obj objectForKey:keys[i]];
+            if ((i < keys.count - 1) && ![obj isKindOfClass:[NSDictionary class]]) return nil;
+        }
+        return obj;
+    } else {
+        return nil;
+    }
+}
 @end
 
 
 
 
 
-#pragma mark ----------->NSMutableDictionary
-@implementation NSMutableDictionary (HHZ_Insert)
+#pragma mark NSMutableDictionary
+@implementation NSMutableDictionary (HHZ_NSMutableDictionary)
 
--(void)hhz_setObject:(id)aObject key:(id<NSCopying>)aKey
++(void)load
 {
-    if (aKey)
-    {
-        if (aObject)
-        {
-            [self setObject:aObject forKey:aKey];
-        }
-        else
-        {
-            [self setObject:[NSNull null] forKey:aKey];
+    //替换setObject:forKey:实现
+    Method method1 = class_getInstanceMethod(NSClassFromString(@"__NSDictionaryM"), @selector(setObject:forKey:));
+    Method method2 = class_getInstanceMethod(NSClassFromString(@"__NSDictionaryM"), @selector(hhz_setObject:forKey:));
+    method_exchangeImplementations(method1, method2);
+}
+
+-(void)hhz_setObject:(id)anObject forKey:(id<NSCopying>)aKey
+{
+    if (aKey) {
+        if (anObject) {
+            [self hhz_setObject:anObject forKey:aKey];
+        } else {
+            [self hhz_setObject:[NSNull null] forKey:aKey];
         }
     }
 }
-
 
 @end

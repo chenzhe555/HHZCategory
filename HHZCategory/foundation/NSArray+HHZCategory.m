@@ -11,8 +11,25 @@
 
 #pragma mark NSArray
 
-@implementation NSArray (HHZ_Log)
+@implementation NSArray (HHZ_NSArray)
 
++(void)load
+{
+    //替换objectAtIndex实现
+    Method method1 = class_getInstanceMethod(NSClassFromString(@"__NSArrayI"), @selector(objectAtIndex:));
+    Method method2 = class_getInstanceMethod(NSClassFromString(@"__NSArrayI"), @selector(hhz_objectAtIndex:));
+    method_exchangeImplementations(method1, method2);
+    
+    //替换objectAtIndexedSubscript实现
+    Method method3 = class_getInstanceMethod(NSClassFromString(@"__NSArrayI"), @selector(objectAtIndexedSubscript:));
+    Method method4 = class_getInstanceMethod(NSClassFromString(@"__NSArrayI"), @selector(hhz_objectAtIndexedSubscript:));
+    method_exchangeImplementations(method3, method4);
+}
+
+
+/**
+ 格式化输出数组
+ */
 -(nullable NSString *)descriptionWithLocale:(id)locale
 {
     NSMutableString * mutaStr = [NSMutableString stringWithString:[NSString stringWithFormat:@"\n %p (\n",self]];
@@ -25,69 +42,56 @@
     return mutaStr;
 }
 
+/**
+ 数组角标
+ */
+- (id)hhz_objectAtIndexedSubscript:(NSUInteger)idx
+{
+    return (idx >= 0 && idx < self.count) ? [self hhz_objectAtIndexedSubscript:idx] : nil;
+}
+
+/**
+ 数组索引
+ */
 -(id)hhz_objectAtIndex:(NSInteger)index
 {
-    return (index >= 0 && index < self.count) ? self[index] : nil;
+    return (index >= 0 && index < self.count) ? [self hhz_objectAtIndex:index] : nil;
 }
 
 @end
-
-
-@implementation NSArray (HHZ_Check)
-
--(instancetype)hhz_check
-{
-    if (![self isKindOfClass:[NSArray class]])
-    {
-        return [NSArray array];
-    }
-    return self;
-}
-
--(id)objectForKeyedSubscript:(NSString *)key
-{
-    return nil;
-}
-@end
-
-
-
 
 #pragma mark NSMutableArray
 
-@implementation NSMutableArray (HHZ_CRUD)
+@implementation NSMutableArray (HHZ_NSMutableArray)
 
--(void)hhz_removeFirstObject
-{
-    if (self.count) {
-        [self removeObjectAtIndex:0];
-    }
++(void)load
+{    
+    //替换objectAtIndex实现
+    Method method1 = class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(addObject:));
+    Method method2 = class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(hhz_addObject:));
+    method_exchangeImplementations(method1, method2);
+    
+    //替换insertObject:atIndex实现
+    Method method3 = class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(insertObject:atIndex:));
+    Method method4 = class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(hhz_insertObject:atIndex:));
+    method_exchangeImplementations(method3, method4);
+    
 }
 
--(void)hhz_removeLastObject
+
+/**
+ 数组添加元素
+ */
+-(void)hhz_addObject:(id)anObject
 {
-    if (self.count) {
-        [self removeObjectAtIndex:self.count - 1];
-    }
+    if (anObject) [self hhz_addObject:anObject];
 }
 
--(void)hhz_insertArray:(NSArray *)arr atIndex:(NSUInteger)index
+/**
+ 数组插入元素
+ */
+-(void)hhz_insertObject:(id)anObject atIndex:(NSUInteger)index
 {
-    for (id obj in arr)
-    {
-        [self insertObject:obj atIndex:index++];
-    }
+    if (anObject && index >= 0) [self hhz_insertObject:anObject atIndex:index];
 }
-
--(void)hhz_reverseArray
-{
-    NSUInteger arrCount = self.count;
-    NSUInteger arrMiddle = floor(arrCount / 2.0);
-    //二分
-    for (NSUInteger i = 0;i < arrMiddle;++i)
-    {
-        [self exchangeObjectAtIndex:i withObjectAtIndex:(arrCount - (i + 1))];
-    }
-}
-
 @end

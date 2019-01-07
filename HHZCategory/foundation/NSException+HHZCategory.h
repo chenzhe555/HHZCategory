@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSException (HHZ_Trace)
+@interface NSException (HHZ_NSException)
 
 /**
  *  异常Exception调用，用于打印当前异常堆栈信息

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "NSDictionary+HHZCategory.h"
 #import "NSArray+HHZCategory.h"
+#import "NSObject+HHZCategory.h"
 
 @interface AppDelegate ()
 
@@ -19,13 +20,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    NSArray * arr = @[@"dsadfa",@(12),[UIImage new]];
-    NSDictionary * dic = @{
-                           @"key1":@"dassa",
-                           @"key2":@(33),
-                           @"key3":[UIView new]};
-    NSLog(@"%@\n\n\n\n\n",arr);
-    NSLog(@"%@",dic);
+    
+//    NSArray * arr = @[@"dsadfa",@(12),[UIImage new]];
+//    NSDictionary * dic = @{
+//                           @"key1":@"dassa",
+//                           @"key2":@(33),
+//                           @"key3":[UIView new]};
+//    NSMutableArray * mArr = [NSMutableArray arrayWithArray:@[@"112"]];
+//    NSLog(@"%@\n\n\n\n\n%@",arr[1],nil);
+//    NSLog(@"%@\n\n\n\n\n%@",dic,dic.DictionaryValue);
+//    NSLog(@"%lu-------\n\n\n",(unsigned long)mArr.count);
+//    [mArr addObject:nil];
+//    [mArr insertObject:nil atIndex:0];
+//    NSLog(@"%@-------\n\n\n",mArr);
+    
+    NSMutableDictionary * mDic = [NSMutableDictionary dictionary];
+    [mDic setObject:@{@"dsd": @"ssssss"} forKey:@"chenzhe"];
+    
+    NSString * str = [mDic getValueByKeys:@[@"chenzhe",@"dsd",@"ccc"]];
+    NSLog(@"....%@",str);
+
     return YES;
 }
 

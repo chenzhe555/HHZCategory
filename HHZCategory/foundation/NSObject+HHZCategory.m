@@ -393,3 +393,25 @@ static const int Block_Key;
 }
 
 @end
+
+@implementation NSObject (Check)
+
+-(id)ArrayValue
+{
+    if ([self isKindOfClass:[NSArray class]]) {
+        return self;
+    } else {
+        return nil;
+    }
+}
+
+-(instancetype)DictionaryValue
+{
+    if ([self isKindOfClass:[NSDictionary class]]) {
+        return self;
+    } else {
+        return nil;
+    }
+}
+
+@end

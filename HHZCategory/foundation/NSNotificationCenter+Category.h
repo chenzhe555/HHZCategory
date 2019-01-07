@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSNotificationCenter (HHZ_OnMainThread)
+@interface NSNotificationCenter (HHZ_NSNotificationCenter)
 /**
  *  在主线程上发送通知
  *

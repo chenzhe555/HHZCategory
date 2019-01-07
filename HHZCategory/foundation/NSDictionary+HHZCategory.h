@@ -10,8 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#pragma mark ----------->NSDictionary
-@interface NSDictionary (HHZ_Log)
+#pragma mark NSDictionary
+@interface NSDictionary (HHZ_NSDictionary)
 
 /**
  *  由于服务器返回的打印出来不是UTF-8格式，不易查看，于是重写NSDictionary打印的description方法，打印的时候能很清楚看到中文字符
@@ -29,6 +29,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 -(nullable NSArray *)hhz_allSortedKeys;
 
+/**
+ *  获取多级key下的value值
+ *
+ *  @return 多级key下的value值
+ */
+-(id)getValueByKeys:(NSArray *)keys;
+
 @end
 
 
@@ -36,16 +43,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-#pragma mark ----------->NSMutableDictionary
+#pragma mark NSMutableDictionary
 
-@interface NSMutableDictionary (HHZ_Insert)
-/**
- *  如果Object为空，默认往字典中塞入Null对象
- *
- *  @param anObject 存储的数据
- *  @param aKey     key值
- */
--(void)hhz_setObject:(nullable id)aObject key:(nullable id<NSCopying>)aKey;
+@interface NSMutableDictionary (HHZ_NSMutableDictionary)
+
 @end
 
 NS_ASSUME_NONNULL_END

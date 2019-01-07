@@ -124,4 +124,17 @@ return self; \
 
 @end
 
+@interface NSObject (Check)
+
+/**
+ 如果不是数组返回 nil
+ */
+-(instancetype)ArrayValue;
+/**
+ 如果不是字典返回 nil
+ */
+-(instancetype)DictionaryValue;
+
+@end
+
 NS_ASSUME_NONNULL_END
