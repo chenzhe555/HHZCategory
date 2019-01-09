@@ -15,13 +15,13 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         //替换objectAtIndex实现
-        Method method1 = class_getInstanceMethod([NSURLSession class], @selector(sessionWithConfiguration:));
-        Method method2 = class_getInstanceMethod([NSURLSession class], @selector(hhz_sessionWithConfiguration:));
+        Method method1 = class_getClassMethod([NSURLSession class], @selector(sessionWithConfiguration:));
+        Method method2 = class_getClassMethod([NSURLSession class], @selector(hhz_sessionWithConfiguration:));
         method_exchangeImplementations(method1, method2);
         
         //替换objectAtIndex实现
-        Method method3 = class_getInstanceMethod([NSURLSession class], @selector(sessionWithConfiguration:delegate:delegateQueue:));
-        Method method4 = class_getInstanceMethod([NSURLSession class], @selector(hhz_sessionWithConfiguration:delegate:delegateQueue:));
+        Method method3 = class_getClassMethod([NSURLSession class], @selector(sessionWithConfiguration:delegate:delegateQueue:));
+        Method method4 = class_getClassMethod([NSURLSession class], @selector(hhz_sessionWithConfiguration:delegate:delegateQueue:));
         method_exchangeImplementations(method3, method4);        
     });
 }
