@@ -32,6 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  获取多级key下的value值
  *
+ *  keys: @[@"aa",@"bb",@"ccc"]
+ *
  *  @return 多级key下的value值
  */
 -(id)getValueByKeys:(NSArray *)keys;
