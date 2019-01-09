@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSURLSession (HHZCategory)
 
+/**
+ 打开/关闭 是否允许抓包工具进行抓包
+ */
++(void)modifyProxyCapturePackageConfig;
 @end
 
 NS_ASSUME_NONNULL_END
